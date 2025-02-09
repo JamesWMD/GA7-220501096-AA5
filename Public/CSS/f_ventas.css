@@ -1,0 +1,316 @@
+.form__facVenta{
+    background-color: #f8efe4;
+    max-width: 1000px;
+    max-height: 700px;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid;
+    margin: auto;
+    margin-top: 10px;
+    
+}
+section{
+    display: flex;
+    justify-content: space-around;
+}
+
+fieldset {
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 5px;    
+}
+
+legend{
+    margin-left: 10px;
+}
+
+select{
+    border: 1px solid;
+    border-radius: 5px;
+    height: 20px;
+    text-align: center;
+}
+
+textarea{
+    min-width: 100%;
+    resize: none;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
+.form_tittle {
+    text-align: center;
+}
+
+/* Imformacion de Factura */
+
+.form__fields--factura {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 5px;
+    margin-right: 20px;
+    
+}
+
+.form__field{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__input {
+    padding: 0 5px;
+    width: 100px;
+    border: 1px solid;
+    border-radius: 5px;
+    height: 20px;
+    
+}
+
+.form__label {
+    font-weight: bold;
+}
+
+/* Botones */
+.form__actions {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 5px;
+}
+
+/* Estilo para ocultar el botón y mantener solo la imagen */
+.form__button {
+    background: none; /* Sin fondo */
+    border: none; /* Sin bordes */
+    padding: 0; /* Sin relleno */
+    margin: 0; /* Sin márgenes */
+    cursor: pointer; /* Cambiar a cursor de enlace */
+    display: inline-block; /* Asegura que respete el tamaño de la imagen */
+}
+
+.form__button img {
+    display: block; /* Asegura que la imagen no tenga espacio adicional */
+    width: 100%; /* Opcional: ajusta el tamaño de la imagen según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Estilo inicial del contenedor */
+.button-container{
+    margin: 0 5px;
+    text-align: center;
+    position: relative; /* Para posicionar elementos relativos al contenedor */
+    display: inline-block; /* Asegura que el botón y el texto estén juntos */
+    
+}
+
+/* Ocultar el párrafo por defecto */
+.form__text {
+    display: none; /* Ocultar texto */
+    position: absolute; /* Permite colocarlo en relación al contenedor */
+    bottom: 100%; /* Posiciona debajo del botón */
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Ajusta para centrar completamente */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+    color: #fff; /* Texto blanco */
+    padding: 2px 10px; /* Espaciado interno */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 14px; /* Tamaño del texto */
+    z-index: 10; /* Asegura que esté encima de otros elementos */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+/* Mostrar el párrafo al pasar el mouse */
+.button-container:hover .form__text {
+    display: block; /* Muestra el texto */
+}
+
+/* Datos clientes */
+
+
+.form__fields--clientes{
+    /* display: flex;
+    justify-content: space-around; */
+    padding: 5px;
+}
+
+.form__field--cliente,
+.form__field--infoVenta{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 5px 5px 0;
+}
+
+.form__input--cliente {
+    border: 1px solid;
+    border-radius: 5px;
+    height: 20px;
+    text-align: center;
+
+}
+
+.form__field--cliente-identificacion, .form__field--cliente-telefono{
+    width: 100px;
+}
+
+.form__field--cliente-nombreRazonSocial, 
+.form__field--cliente-apellidosNombreComercial {
+    width: 200px;
+}
+
+.form__field--cliente-direccion{
+    width: 250px;
+}
+
+
+/* Detalles de productos */
+
+option {
+    background-color: #f8efe4;;
+}
+
+.form__field--productos{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+.form__field--producto {
+    width: 100px;
+    text-align: center;
+}
+
+.form__field--producto-nombreProducto {
+    width: 350px;
+}
+
+
+.form__input--producto{
+    width: 100%;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 5px;
+    height: 20px;
+    padding: 0;
+}
+
+.form__field--producto-cantidad {
+    width: 60px;
+}
+
+/* formato de la tabla */
+.factura__productos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.tabla-productos td {  
+    background-color: #fff;
+}
+.factura__tabla-productos-nombre {
+    width: 200px;
+}
+
+.tablaTotales td {
+    border: none;
+    text-align: end;
+    font-size: 12px;
+}
+
+.total{
+    border-top: 1px solid #000; 
+}
+.total td {
+    font-size: 13px;
+    font-weight: bold;
+}
+.seleccionada {
+    background-color: #D6F5A899;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.factura__tabla-productos-codigo,
+.factura__tabla-productos-categoria,
+.factura__tabla-productos-cantidad {
+    width: 50px;
+}
+
+
+
+.tabla-contenedora {
+    max-height: 140px; /* Define la altura máxima para la tabla */
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+    background-color: #fff;
+}
+
+.factura__tabla-productos {
+    width: 100%; /* Asegura que la tabla ocupe todo el ancho disponible */
+    border-collapse: collapse; /* Elimina los espacios entre las celdas */
+}
+
+.factura__tabla-productos th, 
+.factura__tabla-productos td {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 2px 5px;
+    height: 10px;
+    font-size: 12px;
+}
+
+.factura__tabla-productos thead th {
+    position: sticky; /* Hace que los encabezados sean "pegajosos" */
+    top: 0; /* Mantiene los encabezados en la parte superior durante el scroll */
+    background-color: #f7ed9b; /* Color de fondo para el encabezado */
+    z-index: 1; /* Asegura que los encabezados estén por encima de las filas */
+    
+}
+
+.factura__tabla-productos-nombre {
+    max-width: 300px;
+}
+
+.tablaTotales td {
+    padding-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

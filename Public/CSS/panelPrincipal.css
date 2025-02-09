@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #707070;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr auto;
+    margin: auto;
+    gap: 0;
+    min-height: 100vh;    
+    grid-template-areas:
+    "header header"
+    "nav main"
+    "footer footer";
+    min-height: 100%;
+    font-family: 'Leelawadee';
+    background: url(/IMG/Fondo1.jpg) /*top / cover no-repeat fixed*/;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff6;
+    border-bottom: 0px solid var(--color-primario);
+    box-shadow: 0 0 40px 0 #707070;
+    
+}
+
+.header__dropdown-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.header__link{
+    text-decoration: none;
+    color: var(--color-primario);
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, border-radius 0.24s, outline 0.3s, outline-offset 0.3s;
+    border-radius: 0;
+    outline: 0;
+    outline-offset: 0;
+}
+.header__link:hover {
+    background-color: #D6F5A899;
+    border-radius: 20px;
+    outline: 2px solid;
+    outline-offset: -7px;
+}
+/* Contenedor del menú desplegable */
+.dropdown {
+    position: relative;
+}
+
+/* Ocultar el checkbox */
+.toggle-menu {
+    display: none;
+}
+
+/* Imagen como disparador */
+.dropdown__icon {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    transition: box-shadow 0.3s;
+    margin-right: 1px;
+}
+
+.dropdown__icon:hover {
+    box-shadow: 0 0 10px 1px #707070;
+}
+
+/* Menú oculto por defecto */
+.dropdown__menu {
+    position: absolute;
+    top: 58px; /* Ajustar según el tamaño de la imagen */
+    right: 0; /*los posiciona la lado derecho la pagina*/
+    list-style: none; /*quita el punto de la lista*/
+    margin: 0;
+    padding:0px;
+    background-color: #fff9;
+    box-shadow: 0 4px 6px #0009;
+    display: none; /* Ocultamos el menú inicialmente */
+    z-index: 1000;
+    width: 180px;
+    border-radius: 0 0 10px 10px;
+    font-size: 14px;
+}
+
+/* Elementos del menú */
+.dropdown__menu li {
+    margin: 0;
+    padding: 5px 20px;
+    
+}
+
+.dropdown__menu li a {
+    text-decoration: none;
+    color: #707070;
+    transition: color 0.3s font-weight 0.3s;
+    
+}
+.dropdown__menu li:last-child:hover {
+    border-radius: 0 0 10px 10px;
+
+}
+.dropdown__menu li:hover {
+    font-weight: bold;
+    background-color: #F4FBEB;
+
+}
+
+/* Mostrar el menú cuando el checkbox está activado */
+.toggle-menu:checked + label + .dropdown__menu {
+    display: block;
+}
+
+/*----MENU MODULOS----*/
+
+.navigation {
+    grid-area: nav;
+    border: 1px solid;
+    background-color: #fff6;
+
+    
+}
+.navigation__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+.navigation__button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;;
+    height: 100%
+}
+
+.navigation__button {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: -3px 3px 6px 0 #707070;
+    border: 1px solid #777099;
+}
+.navigation__button:hover {
+    background-color: #D6F5A8;
+    font-weight: bold;
+}
+.navigation__button:active {
+    transform: translate(4px, 4px);
+    box-shadow: none;
+}
+
+/* ------ MAIN -----*/
+.main-menu{
+    grid-area: main;
+    padding: 20px;
+}
+
+.main-menu__container{
+    display: none;
+    gap: 10px;
+}
+
+.main-menu__button {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid;
+    width: 150px;
+    box-shadow: -3px 3px 6px 0 #707070;
+    border: 1px solid #777099;
+}
+.main-menu__button:hover{
+    background-color: #D6F5A8;
+    font-weight: bold;
+}
+
+.main-menu__button:active {
+    transform: translate(4px, 4px);
+    box-shadow: none;
+}
+
+/*---FOOTER----*/
+.footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    color: #707070;
+    text-align: center;
+    padding: 10px 20px;
+    width: 100%; /* Asegura que el footer abarque toda la ventana */
+}
+.footer__text{
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+.footer__link {
+    color: #000;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}

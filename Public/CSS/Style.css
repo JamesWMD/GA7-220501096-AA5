@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --color-primario: #707070;
+    --color-segundario:#D6F5A8;
+}
+body{
+    height: 100%;
+    font-family: 'Leelawadee';
+    background: url(/IMG/Fondo1.jpg) /*top / cover no-repeat fixed*/;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+/*HEADER*/
+.header{
+    background-color: #fffb;
+    border-bottom: 0px solid var(--color-primario);
+    box-shadow: 0 0 40px 0 #707070;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__nav {
+    display: flex;
+    gap: 0px;
+    padding-right: 30px;
+}
+.header__link{
+    text-decoration: none;
+    color: var(--color-primario);
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, border-radius 0.24s, outline 0.3s, outline-offset 0.3s;
+    border-radius: 0;
+    outline: 0;
+    outline-offset: 0;
+    }
+.header__link--login{
+    padding: 10px
+}
+
+.header__link--register{
+    padding: 10px
+}
+.header__link:hover {
+    background-color: #D6F5A899;
+    border-radius: 20px;
+    outline: 2px solid;
+    outline-offset: -8px;
+}
+/*MAIN*/
+
+.main-content {
+    height: 100vh;
+}
+.welcome {
+    padding: 20px 10%;
+    width: 70vw;
+    text-align: justify;
+}
+.welcome__title,
+.welcome__subtitle {
+    color: #000;
+    margin-bottom: 10px;
+}
+.welcome__description {
+    margin-bottom: 15px;
+}
+.welcome__list {
+    list-style: none;
+    padding: 0;
+}
+.welcome__list-item {
+    padding: 5px 0;
+}
+.welcome__list-item:before {
+    content: "✔";
+    margin-right: 10px;
+    color: #000
+}
+
+/* Footer */
+.footer{
+    background-color: #fff;
+    color: #707070;
+    text-align: center;
+    padding: 10px 20px;
+    
+    width: 100vw; /* Asegura que el footer abarque toda la ventana */
+    
+}
+.footer__text {
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+.footer__link {
+    color: #1abc9c;
+    text-decoration: none;
+    margin: 0 5px;
+}
+.footer__link:hover {
+    text-decoration: underline;
+}

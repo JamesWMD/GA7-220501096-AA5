@@ -1,0 +1,51 @@
+.form__gestion-productos {
+    background-color: #f8efe4;
+    max-width: 1000px;
+    max-height: 700px;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.form__fields--gestion-productos_DatosProductos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px ;
+}
+
+.form__field--container_gestion-productos_DatosProductos {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form__field--subcontainer_gestion-productos_DatosProductos {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px
+}
+.form__fields--gestion-productos_datosProductos-descripcion {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.form__fields--gestion-productos_datosProductos-descripcion label {
+    font-weight: bold;
+}
+
+.form__fields--gestion-productos_datosProductos-descripcion textarea {
+    height: 100px;
+    font-size: 15px;
+    font-family: 'Leelawadee';
+}
+
+.form__actions--botones-gestionProductos {
+    width: 50%;
+}
+

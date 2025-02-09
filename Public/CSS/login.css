@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --color-primario: #707070;
+    --color-segundario:#D6F5A8;
+}
+body{
+    min-height: 100%;
+    font-family: 'Leelawadee';
+    background: url(../IMG/Fondo1.jpg) /*top / cover no-repeat fixed*/;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+/*HEADER*/
+.header{
+    background-color: #fff6;
+    border-bottom: 0px solid var(--color-primario);
+    box-shadow: 0 0 40px 0 #707070;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__nav {
+    display: flex;
+    gap: 0px;
+    padding-right: 30px;
+}
+.header__link{
+    text-decoration: none;
+    color: var(--color-primario);
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, border-radius 0.24s, outline 0.3s, outline-offset 0.3s;
+    border-radius: 0;
+    outline: 0;
+    outline-offset: 0;
+}
+.header__link:hover {
+    background-color: #D6F5A899;
+    border-radius: 20px;
+    outline: 2px solid;
+    outline-offset: -7px;
+}
+.header__link--home{
+    padding: 10px;
+}
+
+.header__link--register{
+    padding: 10px;
+}
+
+/*MAIN*/
+.main-content {
+    display: flex;
+    min-height: calc(100vh - 60px);
+    width: 100%;
+    margin-top: 0;
+}
+
+/* LOGIN */
+.login{
+    display: flex;
+    gap: 0px;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff6;
+    border-radius: 15px;
+    width: 280px;
+    height: 400px;
+    padding: 35px;
+    margin: auto;
+    box-shadow: 10px 10px 40px 0 #000A;
+}
+.login__form{
+    width: 100%;
+}
+/*Logo Semper Paratus*/
+.login__logo, 
+.registro__logo{
+    width: 80px;
+    filter: drop-shadow(0 0 40px #707070);
+}
+/*Nombre Semper Paratus*/
+.login__title, 
+.registro__title {
+    font-family: 'Berlin Sans FB';
+    font-weight: 400;
+    text-shadow:0px 0px 2px #707070f7;
+    color: #5d5d5d;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+/*Parrafo del registro*/
+.login__text, 
+.registro__text{
+    font-size: 10px;
+    margin-bottom: 20px;
+    color: #707070;
+}
+
+.login__link, 
+.registro__link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+}
+.login__link:hover, 
+.registro__link:hover {
+    color: #1abc9c;
+}
+
+.login__field{
+    width: 100%;
+    display: flex;
+    background-color: #fff;
+    height: 40px;
+    justify-items: center;
+    align-items: center;
+}
+.login__field--user, 
+.registro__field--noIdentificacion{
+    border-radius: 10px 10px 0 0;
+    box-shadow: 2px 5px 6px 0 #0009;
+    z-index: 10;
+}
+
+.login__icon,
+.registro__icon{
+    max-width: 100%;
+    max-height: 100%;
+}
+.login__field--password, 
+.registro__field--repet-password {
+    border-radius: 0 0 10px 10px;
+    box-shadow: 2px 5px 6px 0 #0009;
+    border-top: 2px solid #70707099;
+    z-index: 1;
+}
+.login__icon-image, 
+.registro__icon-image{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 0 5px;
+    height: 15px;
+
+    }
+
+.login__input,
+.registro__input {
+    width: 80%;
+    border: 1px;
+    height: 25px;
+    padding-left: 10px;
+    margin-top: 2px;
+    outline: none;
+    border-left: 1px solid #70707070;
+}
+.login__input--user, 
+.registro__input--noIdentificacion{
+    border-radius: 0 5px 0 0;
+}
+.login__input--password {
+    border-radius: 0 0 5px 0;
+}
+.login__button,
+.registro__button {
+    width: 100%;
+    padding: 0 10px;
+    height: 40px;
+    margin-top: 30px;
+    box-shadow: 4PX 4px 6px 0 #70707099;
+    border: 1px solid #707070;
+    border-radius: 50px;
+    background-color: #D6F5A8;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 900;
+    color: #707070;
+}
+
+
+.login__button:hover,
+.registro__button:hover {
+    box-shadow: 4PX 4px 6px 0 #0009;
+}
+
+.login__button:active,
+.registro__button:active {
+    transform: translate(4px, 4px);
+    box-shadow: none;
+}
+
+/* REGISTRO */
+
+.registro {
+    display: flex;
+    gap: 0px;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff6;
+    border-radius: 15px;
+    width: 400px;
+    height: 400px;
+    padding: 35px 0px;
+    margin: auto;
+    box-shadow: 10px 10px 40px 0 #000A;
+}
+
+.registro__field{
+    display: flex;
+    background-color: #fff;
+    height: 30px;
+    justify-items: center;
+    align-items: center;
+    padding-right: 10px;
+    min-width: 320px;
+}
+
+.registro__field--nombreUsuario, .registro__field--password{
+    box-shadow: 2px 5px 6px 0 #0009;
+    border-top: 2px solid #70707099;
+    z-index: 1;
+}
+
+.registro__input {
+    width: 100%; /* Asegura que el input ocupe todo el ancho disponible */
+    padding: 10px; /* Espacio para el ícono a la derecha */
+    font-size: 14px;
+}
+.registro__input-contenedor {
+    display: flex;
+}
+
+.contenedor-mensaje{
+    border: 1px solid red;
+    background: #fa7070;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+
+
+/* FOOTER */
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    color: #707070;
+    text-align: center;
+    padding: 10px 20px;
+    position: fixed; /* Hace que el footer sea fijo en la parte baja*/
+    bottom: 0; /* Lo posiciona al final de la ventana */
+    left: 0;
+    width: 100%; /* Asegura que el footer abarque toda la ventana */
+    z-index: 100; /* Coloca el footer en la parte superior de otros elementos si es necesario */
+    margin-top: auto;
+}
+
+.footer__text{
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+.footer__link {
+    color: #1abc9c;
+    text-decoration: none;
+    margin: 0 5px;
+}
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+
+
+
