@@ -11,7 +11,7 @@
   "author": "James William Montenegro y Laura Yoana Medina Gonzales",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
     "express": "^4.21.2",
     "mongoose": "^8.10.0"
   },
