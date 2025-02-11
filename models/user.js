@@ -5,8 +5,8 @@ const saltRounds = 10; // Número de rondas para el cifrado de la contraseña
 
 // Definimos el esquema de la colección "User"
 const UserSchema = new mongoose.Schema({
-    usuario:  { type: String, required: true }, // Campo obligatorio para el usuario
-    password: { type: String, required: true, unique: true } // Campo obligatorio y único para la contraseña
+    usuario:  { type: String, required: true, unique: true }, // Campo obligatorio para el usuario
+    password: { type: String, required: true } // Campo obligatorio y único para la contraseña
 });
 
 // Middleware que se ejecuta antes de guardar un usuario en la base de datos

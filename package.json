@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "James William Montenegro y Laura Medina",
+  "author": "James William Montenegro y Laura Yoana Medina Gonzales",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
